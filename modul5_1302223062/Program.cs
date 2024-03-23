@@ -1,10 +1,16 @@
-﻿namespace modul5_1302223062
+﻿using System;
+using System.Net.NetworkInformation;
+using System.Numerics;
+
+class penjumlahan 
 {
-    internal class Program
+    public static T JumlahTigaAngka<T>(T satu, T Dua, T tiga) where T : IAdditionOperators<T,T,T>
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        return satu + Dua + tiga;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine(JumlahTigaAngka<float>(13, 2, 22));
     }
 }
